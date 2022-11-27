@@ -12,12 +12,35 @@ namespace lab1ex6
             x = int.Parse(Console.ReadLine());
             y = int.Parse(Console.ReadLine());
             z = int.Parse(Console.ReadLine());
-            if (x < y & y<z) Console.WriteLine(z + " " + y + " " + x);
+            
+            if(x>=y & x>=z)
+            {
+                if (y >= z)
+                    Console.WriteLine(x + " " + y + " " + z);
+                else 
+                    Console.WriteLine(x + " " + z + " " + y);
+            }
+            else if(y>=z & y>=x)
+            {
+                if (x >= z)
+                    Console.WriteLine(y + " " + x + " " + z);
+                else
+                    Console.WriteLine(y + " " + z + " " + x);
+            }
+            else if(z>=y & z>=x)
+            {
+                if (x >= y)
+                    Console.WriteLine(z + " " + x + " " + y);
+                else
+                    Console.WriteLine(z + " " + y + " " + x);
+            }
+
+            /*if (x < y & y<z) Console.WriteLine(z + " " + y + " " + x);
             else if(x< y & x<z & y>z ) Console.WriteLine(y + " " + z + " " + x);
             else if(y<x & y<z & x<z) Console.WriteLine(z + " " + x + " " + y);
             else if(y < x & y < z & x > z) Console.WriteLine(x + " " + z + " " + y);
             else if(x<y) Console.WriteLine(y + " " + x + " " + z);
-            else Console.WriteLine(x + " " + y + " " + z);
+            else Console.WriteLine(x + " " + y + " " + z);*/
         }
     }
 }
